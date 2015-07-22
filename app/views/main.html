@@ -1,0 +1,72 @@
+<!-- HEADER -->
+<header-section id="header" class="header section"></header-section>
+
+<!-- EXPERIENCE SECTION -->
+<detail-section id="experience" class="section" get-full-year="getFullYear" icon="work"
+                section="resume.experience"></detail-section>
+
+<!-- EDUCATION SECTION -->
+<detail-section id="education" class="section" get-full-year="getFullYear" icon="school"
+                section="resume.education"></detail-section>
+
+<!-- SKILLS SECTION-->
+<div id="skills" class="section">
+  <div class="section-icon">
+    <i class="material-icons">poll</i>
+  </div>
+  <div id="work-skills" class="section-content">
+    <ul class="section-list">
+      <li class="section-item skill-list" ng-repeat="skill in resume.skills.work">
+        <div class="skill-name">
+          <span>{{skill.name}}</span>
+        </div>
+        <div class="skill-stars">
+          <div class="filled-stars" ng-repeat="filledStar in getFilledStars(skill.value) track by $index">
+            <i class="material-icons">star</i>
+          </div>
+          <div class="unfilled-stars" ng-repeat="filledStar in getUnfilledStars(skill.value) track by $index">
+            <i class="material-icons">star_border</i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div id="personal-skills" class="list-disc section-content">
+    <ul class="section-list">
+      <li class="section-item skill-list" ng-repeat="skill in resume.skills.personal">
+        <div class="skill-name">
+          <span>{{skill}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- for printing purposes -->
+<div class="page-padding"></div>
+<header-section id="header-secondary" class="header section"></header-section>
+<!-- for printing purposes -->
+
+<!-- ACHIEVEMENTS SECTION -->
+<detail-section id="achievements" class="section" get-full-year="getFullYear" icon="stars"
+                section="resume.achievements"></detail-section>
+
+
+<!-- INTERESTS SECTION -->
+<div id="interests" class="list-disc section">
+  <div class="section-icon">
+    <i class="material-icons">color_lens</i>
+  </div>
+  <div class="section-content">
+    <ul class="section-list">
+      <li class="section-item" ng-repeat="interest in resume.interests">
+        <span class="interest-name">{{interest}}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- REFERENCES -->
+<reference-section id="references" class="section"></reference-section>

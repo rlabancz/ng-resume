@@ -1,0 +1,47 @@
+<div class="section-icon">
+  <i class="material-icons">contacts</i>
+</div>
+<div class="section-content">
+  <div class="avatar-placeholder">
+    <img src="images/avatar.jpg" class="avatar"/>
+  </div>
+  <div class="title">
+    <div class="qrcode"></div>
+    <div class="name">{{resume.header.name}}</div>
+    <div class="position">{{resume.header.position}}</div>
+  </div>
+
+  <div class="contact">
+
+    <ul class="contact-list">
+      <li class="contact-item">
+        <div class="contact-icon">
+          <i class="material-icons">home</i>
+        </div>
+        <div class="contact-content">
+          <div>{{resume.header.contact.address[0]}}</div>
+          <div>{{resume.header.contact.address[1]}}</div>
+        </div>
+      </li>
+      <li class="contact-item">
+        <div class="contact-icon">
+          <i class="material-icons">phone</i>
+        </div>
+        <div class="contact-content">{{resume.header.contact.phone}}</div>
+      </li>
+      <li class="contact-item">
+        <div class="contact-icon">
+          <i class="material-icons">email</i>
+        </div>
+        <div class="contact-content">{{resume.header.contact.email}}</div>
+      </li>
+      <li class="contact-item">
+        <div class="contact-icon">
+          <i class="material-icons">share</i>
+        </div>
+        <div class="contact-content">{{resume.header.contact.twitter}}</div>
+      </li>
+    </ul>
+  </div>
+
+</div>

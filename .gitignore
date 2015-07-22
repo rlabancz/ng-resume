@@ -73,3 +73,17 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+# IntelliJ
+.idea
+
+# Bower
+bower_components
+
+# Build
+.tmp
+dist
+
+# privacy
+app/data

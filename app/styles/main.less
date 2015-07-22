@@ -1,0 +1,228 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400);
+
+@fontColor: #444A52;
+
+body {
+  color: @fontColor;
+  padding: 0;
+}
+
+#resume-container {
+  background: #F8F8F8;
+  padding: 12px;
+  width: 768px;
+}
+
+/*** HEADER SECTION ***/
+.header {
+  .section-content {
+    border: none;
+  }
+
+  font-family: 'Roboto Condensed', sans-serif;
+  .name {
+    color: #000;
+    font-size: 40px; //TODO: Change
+    line-height: 60px;
+    font-weight: 600;
+  }
+  .position {
+    font-size: 20px; //TODO: Change
+    font-style: italic;
+  }
+}
+
+.avatar-placeholder, .title {
+  float: left;
+}
+
+@avatarDimension: 100px;
+.avatar {
+  height: @avatarDimension;
+  width: @avatarDimension;
+}
+
+.title {
+  padding-left: 16px;
+}
+
+.contact {
+  float: right;
+  font-size: 13px; //TODO: Change
+  font-weight: 400; //TODO: Change
+  .contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-item {
+    display: table;
+  }
+  .contact-icon, .contact-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .contact-icon {
+    padding-right: 8px;
+    i {
+      font-size: 18px; //TODO: Change
+    }
+  }
+}
+
+/*** SECTIONS ***/
+.section {
+  display: table;
+  padding: 8px 0;
+}
+
+.section-icon, .section-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.section-icon {
+  padding: 0 8px 0 0;
+  i {
+    font-size: 24px; //TODO: Change
+  }
+}
+
+.section-content {
+  border-left: solid 1px @fontColor;
+  width: 100%;
+
+  .section-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@dateLocalWidth: 84px;
+
+.section-item {
+  display: table;
+  margin: 8px 0;
+
+  .date-locale {
+    display: table-cell;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0 8px;
+    text-align: center;
+    vertical-align: middle;
+    width: @dateLocalWidth;
+  }
+  .date {
+    font-size: 14px;
+  }
+  .locale {
+    font-size: 12px;
+  }
+
+  .body {
+    border-left: solid 1px @fontColor;
+    display: table-cell;
+    padding-left: 8px;
+    vertical-align: middle;
+    .details {
+      font-size: 14px; //TODO: Change
+      .name {
+        font-weight: 600;
+      }
+      .position {
+        font-style: italic;
+      }
+    }
+    .results {
+      font-family: 'Roboto Condensed', sans-serif;
+      margin-left: 20px;
+      padding: 0 8px 0 0;
+
+      .result-item {
+        font-size: 13px; //TODO: Change
+        line-height: 18px; //TODO: Change
+        list-style: disc;
+        margin-left: -4px; //TODO: Change
+
+        .result-data {
+          margin-left: -6px; //TODO: Change
+        }
+      }
+    }
+
+  }
+}
+
+/*** SKILLS SECTION ***/
+#work-skills {
+  width: 33%;
+}
+
+.skill-list {
+  margin: 0;
+}
+
+.skill-name, .skill-stars {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.skill-name {
+  float: left;
+  font-size: 14px;
+  overflow: hidden;
+  padding-left: 8px;
+  width: 100px;
+}
+
+.filled-stars, .unfilled-stars {
+  float: left;
+  i {
+    font-size: 18px; //TODO: Change
+  }
+}
+
+/*** INTERESTS SECTION ***/
+.list-disc {
+  ul {
+    list-style: disc !important;
+    padding-left: 32px !important;
+  }
+  .section-item {
+    display: list-item;
+    line-height: 20px;
+    margin: 0;
+  }
+  .skill-name, .interest-name {
+    display: initial;
+    float: initial;
+    font-size: 13px; //TODO: Change
+    padding: 0;
+    width: auto;
+  }
+}
+
+/*** REFERENCES SECTION ***/
+@referenceLineHeight: 17px;
+//TODO: Change
+.reference {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px; //TODO: Change
+  line-height: @referenceLineHeight;
+  padding-left: 16px;
+  .name {
+    font-weight: 600;
+  }
+  .position {
+    font-style: italic;
+  }
+  .address {
+    height: @referenceLineHeight;
+  }
+}
+
+.page-padding {
+  padding-top: 32px;
+}

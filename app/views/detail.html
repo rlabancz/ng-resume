@@ -1,0 +1,27 @@
+<div class="section-icon">
+  <i class="material-icons">{{icon}}</i>
+</div>
+<div class="section-content">
+  <ul class="section-list">
+    <li class="section-item" data-ng-repeat="item in section">
+
+      <div class="date-locale">
+        <div class="date"><span>{{getYear(item.dateStart)}}</span> <span ng-if="(item.dateEnd)">- {{getYear(item.dateEnd)}}</span></div>
+        <div class="locale">{{item.location}}</div>
+      </div>
+
+      <div class="body">
+        <div class="details">
+          <span class="name">{{item.name}}</span>
+          <span class="position">{{item.position}}</span>
+        </div>
+        <ul class="results">
+          <li class="result-item" data-ng-repeat="result in item.results">
+            <div class="result-data">{{result}}</div>
+          </li>
+        </ul>
+      </div>
+
+    </li>
+  </ul>
+</div>
