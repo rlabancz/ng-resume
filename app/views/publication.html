@@ -1,0 +1,26 @@
+<div class="section-icon">
+  <i class="material-icons">{{icon}}</i>
+</div>
+<div class="section-content">
+  <ul class="section-list">
+    <li class="section-item" data-ng-repeat="item in section">
+
+      <div class="date-locale">
+        <qrcode data="{{item.website}}" href="{{item.website}}" size="55"></qrcode>
+      </div>
+
+      <div class="body">
+        <div class="details">
+          <span class="name">{{item.name}}</span>
+          <span class="position">{{item.position}}</span>
+        </div>
+        <ul class="results">
+          <li class="result-item">
+            <div class="result-data">{{item.summary}}</div>
+          </li>
+        </ul>
+      </div>
+
+    </li>
+  </ul>
+</div>

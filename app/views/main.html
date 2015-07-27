@@ -1,13 +1,13 @@
 <!-- HEADER -->
-<header-section id="header" class="header section"></header-section>
+<header-section id="header" class="header section" section="resume.basics"></header-section>
 
-<!-- EXPERIENCE SECTION -->
-<detail-section id="experience" class="section" get-full-year="getFullYear" icon="work"
-                section="resume.experience"></detail-section>
+<!-- WORK SECTION -->
+<work-section id="work" class="section" get-full-year="getFullYear" icon="work"
+                section="resume.work"></work-section>
 
 <!-- EDUCATION SECTION -->
-<detail-section id="education" class="section" get-full-year="getFullYear" icon="school"
-                section="resume.education"></detail-section>
+<education-section id="education" class="section" get-full-year="getFullYear" icon="school"
+                section="resume.education"></education-section>
 
 <!-- SKILLS SECTION-->
 <div id="skills" class="section">
@@ -16,15 +16,15 @@
   </div>
   <div id="work-skills" class="section-content">
     <ul class="section-list">
-      <li class="section-item skill-list" ng-repeat="skill in resume.skills.work">
+      <li class="section-item skill-list" ng-repeat="skill in resume.skills">
         <div class="skill-name">
           <span>{{skill.name}}</span>
         </div>
         <div class="skill-stars">
-          <div class="filled-stars" ng-repeat="filledStar in getFilledStars(skill.value) track by $index">
+          <div class="filled-stars" ng-repeat="filledStar in getFilledStars(skill.level) track by $index">
             <i class="material-icons">star</i>
           </div>
-          <div class="unfilled-stars" ng-repeat="filledStar in getUnfilledStars(skill.value) track by $index">
+          <div class="unfilled-stars" ng-repeat="filledStar in getUnfilledStars(skill.level) track by $index">
             <i class="material-icons">star_border</i>
           </div>
         </div>
@@ -34,7 +34,7 @@
 
   <div id="personal-skills" class="list-disc section-content">
     <ul class="section-list">
-      <li class="section-item skill-list" ng-repeat="skill in resume.skills.personal">
+      <li class="section-item skill-list" ng-repeat="skill in resume.personalSkills">
         <div class="skill-name">
           <span>{{skill}}</span>
         </div>
@@ -45,12 +45,20 @@
 
 <!-- for printing purposes -->
 <div class="page-padding"></div>
-<header-section id="header-secondary" class="header section"></header-section>
+<header-mini-section id="header-mini" class="header-mini section" section="resume.basics"></header-mini-section>
 <!-- for printing purposes -->
 
+<!-- PUBLICATION SECTION -->
+<publication-section id="publication" class="section" get-full-year="getFullYear" icon="folder_special"
+                     section="resume.publications"></publication-section>
+
+<!-- VOLUNTEER SECTION -->
+<volunteer-section id="volunteer" class="section" get-full-year="getFullYear" icon="supervisor_account"
+                section="resume.volunteer"></volunteer-section>
+
 <!-- ACHIEVEMENTS SECTION -->
-<detail-section id="achievements" class="section" get-full-year="getFullYear" icon="stars"
-                section="resume.achievements"></detail-section>
+<awards-section id="awards" class="section" get-full-year="getFullYear" icon="stars"
+                section="resume.awards"></awards-section>
 
 
 <!-- INTERESTS SECTION -->
@@ -61,7 +69,7 @@
   <div class="section-content">
     <ul class="section-list">
       <li class="section-item" ng-repeat="interest in resume.interests">
-        <span class="interest-name">{{interest}}</span>
+        <span class="interest-name">{{interest.name}}</span>
       </li>
     </ul>
   </div>

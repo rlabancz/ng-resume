@@ -9,21 +9,47 @@ body {
   width: 768px;
 }
 /*** HEADER SECTION ***/
-.header {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-.header .section-content {
+.header .section-content,
+.header-mini .section-content {
   border: none;
 }
-.header .name {
+.header .title,
+.header-mini .title {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-left: 16px;
+}
+.header .title .name,
+.header-mini .title .name {
   color: #000;
   font-size: 40px;
   line-height: 60px;
   font-weight: 600;
+  width: 400px;
 }
-.header .position {
+.header .title .position,
+.header-mini .title .position {
   font-size: 20px;
   font-style: italic;
+}
+.header .qrcode,
+.header-mini .qrcode {
+  height: 88px;
+  float: left;
+  margin-left: 6px;
+  margin-right: 6px;
+  width: 88px;
+}
+.header-mini .section-content {
+  border-left: solid 1px #444a52;
+}
+.header-mini .title .name {
+  font-size: 20px;
+  line-height: 42px;
+  padding-right: 8px;
+}
+.header-mini .title .position {
+  font-size: 15px;
+  line-height: 42px;
 }
 .avatar-placeholder,
 .title {
@@ -32,9 +58,6 @@ body {
 .avatar {
   height: 100px;
   width: 100px;
-}
-.title {
-  padding-left: 16px;
 }
 .contact {
   float: right;
@@ -192,7 +215,8 @@ body {
 }
 .reference .address {
   height: 17px;
+  width: 100%;
 }
 .page-padding {
-  padding-top: 32px;
+  padding-top: 44px;
 }

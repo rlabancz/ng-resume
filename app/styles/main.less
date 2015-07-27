@@ -14,21 +14,51 @@ body {
 }
 
 /*** HEADER SECTION ***/
-.header {
+.header, .header-mini {
   .section-content {
     border: none;
   }
 
-  font-family: 'Roboto Condensed', sans-serif;
-  .name {
-    color: #000;
-    font-size: 40px; //TODO: Change
-    line-height: 60px;
-    font-weight: 600;
+  .title {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-left: 16px;
+    .name {
+      color: #000;
+      font-size: 40px; //TODO: Change
+      line-height: 60px; //TODO: Change
+      font-weight: 600;
+      width: 400px;
+    }
+    .position {
+      font-size: 20px; //TODO: Change
+      font-style: italic;
+    }
   }
-  .position {
-    font-size: 20px; //TODO: Change
-    font-style: italic;
+
+  @qrCodeSize: 88px;
+  .qrcode {
+    height: @qrCodeSize;
+    float: left;
+    margin-left: 6px;
+    margin-right: 6px;
+    width: @qrCodeSize;
+  }
+}
+
+.header-mini {
+  .section-content {
+    border-left: solid 1px @fontColor;
+  }
+  .title {
+    .name {
+      font-size: 20px; //TODO: Change
+      line-height: 42px; //TODO: Change
+      padding-right: 8px;
+    }
+    .position {
+      font-size: 15px; //TODO: Change
+      line-height: 42px; //TODO: Change
+    }
   }
 }
 
@@ -40,10 +70,6 @@ body {
 .avatar {
   height: @avatarDimension;
   width: @avatarDimension;
-}
-
-.title {
-  padding-left: 16px;
 }
 
 .contact {
@@ -220,9 +246,10 @@ body {
   }
   .address {
     height: @referenceLineHeight;
+    width: 100%;
   }
 }
 
 .page-padding {
-  padding-top: 32px;
+  padding-top: 44px;
 }

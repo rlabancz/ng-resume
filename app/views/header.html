@@ -3,12 +3,14 @@
 </div>
 <div class="section-content">
   <div class="avatar-placeholder">
+    <!--
     <img src="images/avatar.jpg" class="avatar"/>
+    -->
+    <qrcode data="{{section.website}}" href="{{section.website}}" size="88"></qrcode>
   </div>
   <div class="title">
-    <div class="qrcode"></div>
-    <div class="name">{{resume.header.name}}</div>
-    <div class="position">{{resume.header.position}}</div>
+    <div class="name">{{section.name}}</div>
+    <div class="position">{{section.label}}</div>
   </div>
 
   <div class="contact">
@@ -19,27 +21,27 @@
           <i class="material-icons">home</i>
         </div>
         <div class="contact-content">
-          <div>{{resume.header.contact.address[0]}}</div>
-          <div>{{resume.header.contact.address[1]}}</div>
+          <div>{{section.location.address}}</div>
+          <div><span>{{section.location.city}}</span>, <span>{{section.location.postalCode}}</span></div>
         </div>
       </li>
       <li class="contact-item">
         <div class="contact-icon">
           <i class="material-icons">phone</i>
         </div>
-        <div class="contact-content">{{resume.header.contact.phone}}</div>
+        <div class="contact-content">{{section.phone}}</div>
       </li>
       <li class="contact-item">
         <div class="contact-icon">
           <i class="material-icons">email</i>
         </div>
-        <div class="contact-content">{{resume.header.contact.email}}</div>
+        <div class="contact-content">{{section.email}}</div>
       </li>
       <li class="contact-item">
         <div class="contact-icon">
           <i class="material-icons">share</i>
         </div>
-        <div class="contact-content">{{resume.header.contact.twitter}}</div>
+        <div class="contact-content">{{section.profiles[0].username}}</div>
       </li>
     </ul>
   </div>

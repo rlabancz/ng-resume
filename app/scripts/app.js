@@ -10,4 +10,5 @@
  */
 angular
   .module('resumeApp', [
+    'monospaced.qrcode'
   ]);
