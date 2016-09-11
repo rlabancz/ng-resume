@@ -85,5 +85,5 @@ bower_components
 .tmp
 dist
 
-# privacy
-app/data
+# Privacy
+/app/data/resume.json
