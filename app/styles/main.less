@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400);
-
+@printSize: 1;
+@webSize: 2;
 @fontColor: #444A52;
 @qrCodeSize: 88px;
 
@@ -99,6 +100,7 @@ body {
     }
   }
 }
+
 #header {
   .contact-list {
     height: @qrCodeSize;
@@ -185,13 +187,17 @@ body {
         }
       }
     }
-
   }
 }
 
 /*** SKILLS SECTION ***/
 #work-skills {
-  width: 33%;
+  padding-left: 8px;
+  width: 30%;
+}
+
+#personal-skills {
+
 }
 
 .skill-list {
@@ -259,5 +265,5 @@ body {
 }
 
 .page-padding {
-  padding-top: 55px;
+  padding-top: 30px;
 }

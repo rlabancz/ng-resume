@@ -16,13 +16,19 @@
   <div class="contact">
 
     <ul class="contact-list">
-      <li id="address" class="contact-item" ng-if="section.location">
+      <li id="location" class="contact-item" ng-if="section.location">
+        <div class="contact-icon">
+          <i class="material-icons">place</i>
+        </div>
+        <div class="contact-content">{{section.location}}</div>
+      </li>
+      <li id="address" class="contact-item" ng-if="section.address && !section.location">
         <div class="contact-icon">
           <i class="material-icons">home</i>
         </div>
         <div class="contact-content">
-          <div>{{section.location.address}}</div>
-          <div><span>{{section.location.city}}</span>, <span>{{section.location.postalCode}}</span></div>
+          <div>{{section.address.address}}</div>
+          <div><span>{{section.address.city}}</span>, <span>{{section.address.postalCode}}</span></div>
         </div>
       </li>
       <li class="contact-item">
