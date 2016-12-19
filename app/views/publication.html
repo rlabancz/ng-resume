@@ -6,13 +6,13 @@
     <li class="section-item" data-ng-repeat="item in section">
 
       <div class="date-locale">
-        <qrcode data="{{item.website}}" href="{{item.website}}" size="55"></qrcode>
+        <a href="{{item.website}}"><qrcode data="{{item.websiteQR}}" href="{{item.websiteQR}}" size="55"></qrcode></a>
       </div>
 
       <div class="body">
         <div class="details">
           <span class="name">{{item.name}}</span>
-          <span class="position">{{item.position}}</span>
+          <span class="position">({{item.websiteQR}})</span>
         </div>
         <ul class="results">
           <li class="result-item">

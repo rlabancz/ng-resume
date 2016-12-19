@@ -8,7 +8,7 @@
  * Controller of the resumeApp
  */
 angular.module('resumeApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
 
     $http.get('./data/resume.json').success(function (result) {
       $scope.resume = result;
@@ -28,4 +28,4 @@ angular.module('resumeApp')
     $scope.getUnfilledStars = function (value) {
       return new Array(5 - value);
     };
-  });
+  }]);

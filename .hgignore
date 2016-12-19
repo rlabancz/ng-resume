@@ -1,3 +1,4 @@
+syntax: glob
 # Logs
 logs
 *.log
@@ -85,8 +86,5 @@ bower_components
 .tmp
 dist
 
-# Privacy
-/app/data/resume.json
-
-#mercurial
-.hg
+#ignore git
+.git
