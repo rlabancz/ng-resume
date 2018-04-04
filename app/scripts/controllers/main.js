@@ -12,6 +12,12 @@ angular.module('resumeApp')
 
     $http.get('./data/resume.json').success(function (result) {
       $scope.resume = result;
+    }).error(function() {
+      $http.get('./data/sample.json').success(function (result) {
+        $scope.resume = result;
+      }).error(function() {
+        console.log('error loading files');
+      });
     });
 
     $scope.getFullYear = function (date) {
